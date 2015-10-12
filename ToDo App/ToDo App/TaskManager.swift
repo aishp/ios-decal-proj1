@@ -9,6 +9,7 @@
 import UIKit
 
 var taskMgr:TaskManager = TaskManager()
+var completedTasks:TaskManager = TaskManager()
 struct task
 {
     var name = "Un-Named"
@@ -24,6 +25,11 @@ class TaskManager: NSObject
     {
         let curr_time = NSDate().timeIntervalSince1970
         tasks.append(task(name: name, desc: desc, timestamp: curr_time, finished: false))
+    }
+    
+    func appendTask(temp_task: task)
+    {
+        tasks.append(temp_task)
     }
 }
 

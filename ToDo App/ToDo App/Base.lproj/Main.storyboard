@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZfM-Qc-z2X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ZfM-Qc-z2X">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -8,26 +8,25 @@
         <scene sceneID="3a8-6S-7M7">
             <objects>
                 <viewController id="gTG-6M-zDO" customClass="AddTaskViewController" customModule="ToDo_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ncl-Km-cM6"/>
-                        <viewControllerLayoutGuide type="bottom" id="2o7-OJ-FVs"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GOm-Sk-i91">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQa-nB-IGZ">
-                                <rect key="frame" x="83" y="125" width="449" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" id="nQa-nB-IGZ">
+                                <rect key="frame" x="20" y="94" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avM-dc-jD6">
-                                <rect key="frame" x="83" y="198" width="449" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Description" textAlignment="natural" minimumFontSize="17" id="avM-dc-jD6">
+                                <rect key="frame" x="21" y="155" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhU-Wf-XG6">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mhU-Wf-XG6">
+                                <rect key="frame" x="119" y="228" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="createClicked:" destination="gTG-6M-zDO" eventType="touchUpInside" id="vbw-xH-rN9"/>
@@ -44,29 +43,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LW-TV-tLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3317" y="241"/>
+            <point key="canvasLocation" x="1769" y="228"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="E12-KV-HNq">
             <objects>
                 <viewController id="Kce-Xu-TDt" customClass="MainTableViewController" customModule="ToDo_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="16B-PJ-JPJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="jQT-bf-JjO"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tIR-LB-9id">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="27" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u0c-pX-wjY">
-                                <rect key="frame" x="0.0" y="105" width="600" height="495"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" id="u0c-pX-wjY">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Test" rowHeight="27" id="r5M-El-p0Y">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="27"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Test" rowHeight="38" id="r5M-El-p0Y">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r5M-El-p0Y" id="8J6-2b-EOf">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="26.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -82,12 +78,12 @@
                     <navigationItem key="navigationItem" title="Tasks" id="JKh-l4-h2q">
                         <barButtonItem key="leftBarButtonItem" title="View Stats" id="9QI-8E-MaL">
                             <connections>
-                                <segue destination="9Yj-Mq-15l" kind="show" id="iQp-E6-M2P"/>
+                                <segue destination="9Yj-Mq-15l" kind="push" id="iQp-E6-M2P"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OYd-ct-GkH">
                             <connections>
-                                <segue destination="gTG-6M-zDO" kind="show" id="2bc-HO-cst"/>
+                                <segue destination="gTG-6M-zDO" kind="push" id="2bc-HO-cst"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -97,28 +93,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6L-1O-wTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2471" y="241"/>
+            <point key="canvasLocation" x="1317" y="228"/>
         </scene>
         <!--View Stats-->
         <scene sceneID="hes-4v-Y7a">
             <objects>
                 <viewController id="9Yj-Mq-15l" customClass="StatsViewController" customModule="ToDo_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="q6n-7q-cs6"/>
-                        <viewControllerLayoutGuide type="bottom" id="JUI-wA-OU8"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="USz-Kb-EMJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of tasks completed in the last 24 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOG-oC-JG3">
-                                <rect key="frame" x="119" y="127" width="363" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AEa-Hs-fLP">
+                                <rect key="frame" x="139" y="254" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEa-Hs-fLP">
-                                <rect key="frame" x="279" y="217" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks completed in the last 24 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NOG-oC-JG3">
+                                <rect key="frame" x="20" y="71" width="300" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,10 +121,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="View Stats" id="0lj-OQ-l9Z"/>
+                    <connections>
+                        <outlet property="countLabel" destination="AEa-Hs-fLP" id="ANS-mE-FvV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Z6-kY-CBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2471" y="1170"/>
+            <point key="canvasLocation" x="1317" y="1107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MNQ-y8-dL7">
@@ -148,7 +145,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pT-AW-8A8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="241"/>
+            <point key="canvasLocation" x="879.4666666666667" y="228.14666666666668"/>
         </scene>
     </scenes>
 </document>

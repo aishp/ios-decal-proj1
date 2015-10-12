@@ -26,7 +26,10 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func createClicked(sender: AnyObject) {
        // print("Create Clicked")
-        taskMgr.addTask(taskName.text!, desc: taskDesc.text!)
+        if(taskName.text != "")
+        {
+         taskMgr.addTask(taskName.text!, desc: taskDesc.text!)
+        }
         taskName.text = ""
         taskDesc.text = ""
         self.navigationController?.popToRootViewControllerAnimated(true)

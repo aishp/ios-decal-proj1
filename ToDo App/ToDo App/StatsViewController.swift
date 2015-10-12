@@ -10,6 +10,7 @@ import UIKit
 
 class StatsViewController: UIViewController {
 
+    @IBOutlet weak var countLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,18 @@ class StatsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        var counter = 0
+        for var i = 0; i<completedTasks.tasks.count; i++
+        {
+            if((completedTasks.tasks[i].timestamp + 86400) > NSDate().timeIntervalSince1970)
+            {
+                counter++;
+            }
+        }
+        countLabel.text = String(counter)
     }
     
 

@@ -39,7 +39,26 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.detailTextLabel?.text = taskMgr.tasks[indexPath.row].desc
         return cell
     }
-
+    
+    //UITableViewDelegate
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.Delete)
+        {
+            taskMgr.tasks[indexPath.row].finished = true
+           /* print(taskMgr.tasks[indexPath.row].timestamp)
+            print(NSDate().timeIntervalSince1970)
+            if((taskMgr.tasks[indexPath.row].timestamp + 86400) > NSDate().timeIntervalSince1970 )
+            {
+                taskMgr.counter++
+                
+            }
+            print(taskMgr.counter)*/
+            
+            completedTasks.appendTask(taskMgr.tasks[indexPath.row])
+            taskMgr.tasks.removeAtIndex(indexPath.row)
+            myTable.reloadData()
+        }
+    }
     
 
     /*
