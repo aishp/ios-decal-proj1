@@ -30,6 +30,10 @@ class StatsViewController: UIViewController {
             {
                 counter++;
             }
+            else //this task has expired, remove from completed list to save memory
+            {
+                completedTasks.tasks.removeAtIndex(i)
+            }
         }
         countLabel.text = String(counter)
     }

@@ -40,11 +40,14 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    
+    
+    
     //UITableViewDelegate
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if(editingStyle == UITableViewCellEditingStyle.Delete)
         {
-            taskMgr.tasks[indexPath.row].finished = true
+           // taskMgr.tasks[indexPath.row].finished = true
            /* print(taskMgr.tasks[indexPath.row].timestamp)
             print(NSDate().timeIntervalSince1970)
             if((taskMgr.tasks[indexPath.row].timestamp + 86400) > NSDate().timeIntervalSince1970 )
@@ -54,11 +57,23 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             print(taskMgr.counter)*/
             
-            completedTasks.appendTask(taskMgr.tasks[indexPath.row])
+          //  completedTasks.appendTask(taskMgr.tasks[indexPath.row])
             taskMgr.tasks.removeAtIndex(indexPath.row)
             myTable.reloadData()
         }
+        
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        taskMgr.tasks[indexPath.row].finished = true
+        completedTasks.appendTask(taskMgr.tasks[indexPath.row])
+        taskMgr.tasks.removeAtIndex(indexPath.row)
+        
+    }
+
     
 
     /*
